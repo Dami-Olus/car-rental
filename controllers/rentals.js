@@ -11,5 +11,8 @@ res.render('rentals/index', {rentals: rentals})
 }
 
 async function show(req,res){
-res.render('rentals/show')
+  const rental = await Car.findById(req.params.id);
+  console.log(rental);
+  res.render('rentals/show', {rental: rental})
+
 }

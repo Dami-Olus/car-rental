@@ -2,13 +2,16 @@
 
 <h1>Rental view</h1>
 <% rentals.forEach(function(r){ %>
-  <div class="car-card">
-    <img src="/images/tesla.jpeg" alt="">
-    <div>
-      <p><%=r.make%></p>
-      <p><%=r.model%></p>
+  <a href="/rentals/<%=r.id%>">
+    <div class="car-card">
+      <img src="/images/tesla.jpeg" alt="">
+      <div>
+        <p><%=r.make%></p>
+        <p><%=r.model%></p>
+      </div>
     </div>
-  </div>
+  </a>
+ 
 <%})%>
 
 <%- include('../partials/footer') %>

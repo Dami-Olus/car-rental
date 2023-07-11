@@ -1,5 +1,15 @@
 <%- include('../partials/header') %>
 
-<h1>Rental details view</h1>
+<h2>Rental details view</h2>
+<div><%=rental.make%></div>
+<div><%=rental.model%></div>
+
+<form action="">
+  <label for="">Start Date</label>
+  <input type="date">
+  <label for="">End Date</label>
+  <input type="date">
+  <input type="submit" value="Request">
+</form>
 
 <%- include('../partials/footer') %>
