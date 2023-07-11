@@ -1,7 +1,23 @@
 <%- include('../partials/header') %>
 
 <h2>Cars Page</h2>
-<p><%=user.name%></p>
+
+<% if(cars ){cars.forEach(car => { %>
+<a href="/cars/<%=car._id%>">
+  <div class="car-card">
+    <div class="car-img">
+      <img src="/images/tesla.jpeg" alt="" />
+    </div>
+    <div>
+      <p><%=car.make%></p>
+      <p><%=car.model%></p>
+    </div>
+  </div>
+</a>
+<%})}else{ %>
+<p>You do not have any car</p>
+<%}%>
+
 <a href="/cars/new">Add Car</a>
 
 <%- include('../partials/footer') %>

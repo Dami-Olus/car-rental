@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  padding: 0;
+  padding: auto;
   height: 100vh;
 }
 
@@ -41,4 +41,24 @@ nav > a:hover {
 
 .login img {
   height: 30px;
+}
+
+main {
+  padding-left: 200px;
+}
+
+.car-card {
+  display: flex;
+  margin: 40px auto;
+}
+
+.car-img {
+ 
+  
+  
+}
+
+.car-card img {
+  object-fit: contain;
+  height: 100px;
 }
