@@ -1,20 +1,29 @@
-.brand-logo {
-  margin-left: 15px;
+* {
+  box-sizing: border-box;
 }
 
-.card .card-content .card-title {
-  margin-bottom: 10px;
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
 }
 
-#search-row form {
-  padding-top: 20px;
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.student-name {
-  position: relative;
-  top: -5px;
+nav > img {
+  width: 34px;
+  object-fit: contain;
 }
 
-.collection-item form {
-  margin-top: -5px;
+.login {
+  display: flex;
+  height: 34px;
+}
+
+.login img {
+  height: 10px;
 }
