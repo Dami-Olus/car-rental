@@ -17,13 +17,28 @@ nav {
 nav > img {
   width: 34px;
   object-fit: contain;
+  margin-right: auto;
+}
+
+nav > a {
+  margin: 20px;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+nav > a:hover {
+  color: white;
+  background-color: #424748;
 }
 
 .login {
   display: flex;
+  justify-content: center;
+  align-items: center;
   height: 34px;
 }
 
 .login img {
-  height: 10px;
+  height: 30px;
 }
