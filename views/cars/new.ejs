@@ -1,5 +1,18 @@
 <%- include('../partials/header') %>
 
 <h2><%=title %></h2>
+<form action="/cars" method="POST">
+  <label for="">Car Image</label>
+  <input type="file" name="image">
+  <label for="">Make</label>
+  <input type="text" name="make">
+  <label for="">Model</label>
+  <input type="text" name="model">
+  <label for="">Year</label>
+  <input type="text" name="year">
+  <label for="">Color</label>
+  <input type="text" name="color">
+  <input type="submit" value="Add Car">
+</form>
 
 <%- include('../partials/footer') %>

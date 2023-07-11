@@ -6,4 +6,6 @@ router.get("/", carsCtrl.index);
 
 router.get("/new", carsCtrl.new);
 
+router.post("/", carsCtrl.create)
+
 module.exports = router;
