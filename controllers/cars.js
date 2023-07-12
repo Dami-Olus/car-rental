@@ -55,4 +55,7 @@ async function update(req, res) {
   res.redirect(`/cars/${req.params.id}`);
 }
 
-function deleteCar() {}
+async function deleteCar(req, res) {
+  await Car.deleteOne({_id: req.params.id})
+  res.redirect('/cars')
+}

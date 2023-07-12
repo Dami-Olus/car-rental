@@ -14,4 +14,6 @@ router.get('/:id/edit', carsCtrl.edit)
 
 router.put('/:id/', carsCtrl.update)
 
+router.delete('/:id', carsCtrl.delete)
+
 module.exports = router;
