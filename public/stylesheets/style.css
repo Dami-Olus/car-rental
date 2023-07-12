@@ -12,8 +12,9 @@ body {
 }
 
 nav {
+  padding: 0 20px ;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-evenly;
   align-items: center;
   background-color: #1b3b6f;
 }
@@ -24,7 +25,16 @@ nav > img {
   margin-right: auto;
 }
 
-nav > a {
+nav .logo {
+  flex: 1;
+}
+
+.logo a h3 {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-link {
   margin: 20px;
   padding: 10px;
   text-decoration: none;
@@ -32,7 +42,7 @@ nav > a {
   color: white;
 }
 
-nav > a:hover {
+.nav-link:hover {
   color: white;
   background-color: #424748;
 }
