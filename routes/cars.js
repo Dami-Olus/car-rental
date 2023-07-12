@@ -10,4 +10,8 @@ router.post("/", carsCtrl.create)
 
 router.get('/:id', carsCtrl.show)
 
+router.get('/:id/edit', carsCtrl.edit)
+
+router.put('/:id/', carsCtrl.update)
+
 module.exports = router;

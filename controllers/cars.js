@@ -5,19 +5,25 @@ module.exports = {
   index,
   create,
   delete: deleteCar,
-  show
+  show,
+  update,
+  edit,
 };
 
-async function show(req, res) {
-  console.log(req.params);
+async function edit(req, res) {
   const car = await Car.findById(req.params.id);
-  console.log(car);
-  res.render('cars/show', {car: car})
+  res.render("cars/edit", { car: car });
+}
+
+async function show(req, res) {
+  const car = await Car.findById(req.params.id);
+
+  res.render("cars/show", { car: car });
 }
 
 async function index(req, res) {
-  const cars = await Car.find({user: req.user._id});
-  console.log(cars)
+  const cars = await Car.find({ user: req.user._id });
+  console.log(cars);
   res.render("cars/index", { title: "Your Garage", cars: cars });
 }
 
@@ -38,6 +44,15 @@ async function create(req, res) {
   } catch (err) {
     console.log(err);
   }
+}
+
+async function update(req, res) {
+  const update = req.body;
+  console.log(update);
+  console.log(req.params.id)
+  const car = await Car.findOneAndUpdate({ _id: req.params.id },update);
+  console.log(car)
+  res.redirect(`/cars/${req.params.id}`);
 }
 
 function deleteCar() {}
