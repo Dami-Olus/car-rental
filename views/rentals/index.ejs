@@ -1,23 +1,37 @@
 <%- include('../partials/header') %>
 
 <h1>Rental view</h1>
-<div class="cars">
-  
-  <% rentals.forEach(function(r){ %>
-    <% if(r.user._id.valueOf() !== user.id) { %>
-      <a href="/rentals/<%=r.id%>">
-        <div class="car-card">
-          <img src="/images/tesla.jpeg" alt="" />
-          <div>
-            <p><%=r.make%></p>
-            <p><%=r.model%></p>
-          </div>
+<div class="rental-view">
+  <div class="cars">
+    <% rentals.forEach(function(r){ %> <% if(r.user._id.valueOf() !== user.id) {
+    %>
+    <a href="/rentals/<%=r.id%>">
+      <div class="car-card">
+        <img src="/images/tesla.jpeg" alt="" />
+        <div>
+          <p><%=r.make%></p>
+          <p><%=r.model%></p>
         </div>
-      </a>
-    
-   <% } %>
-  
-  <%})%>
+      </div>
+    </a>
+
+    <% } %> <%})%>
+  </div>
+
+  <div class="my-requests">
+    <h3>My requests</h3>
+    <% requests.forEach(function(r){ %> <% if(user.id===r.userId){ %>
+    <div class="car-card">
+      <div class="car-img">
+        <img src="/images/tesla.jpeg" alt="" />
+      </div>
+      <div>
+        <p><%=r.car.make%></p>
+        <p><%=r.car.model%></p>
+      </div>
+    </div>
+    <% } %> <%})%>
+  </div>
 </div>
 
 <%- include('../partials/footer') %>

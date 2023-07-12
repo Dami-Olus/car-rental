@@ -44,7 +44,7 @@ nav .logo {
 
 .nav-link:hover {
   color: white;
-  background-color: #424748;
+  background-color: #9EB3C2;
 }
 
 .login {
@@ -161,4 +161,38 @@ main {
 .car-card img {
   object-fit: contain;
   height: 150px;
+}
+
+.rental-view {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.rental-view .cars {
+  flex: 2;
+}
+
+.my-requests {
+  flex: 1;
+}
+
+.rental-img {
+  width: 100vw;
+}
+
+.rental-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.rent-profile {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+}
+
+.rent-profile img {
+  height: 100px;
+  border-radius: 50%;
 }

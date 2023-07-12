@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
 // Create your User Model
 
@@ -6,9 +7,10 @@ const requestSchema = new mongoose.Schema(
   {
     userId: String,
     userName: String,
-    date: Date,
+    startDate: Date,
+    endDate: Date,
     userAvatar: String,
-    carId: String,
+    car: { type: Schema.Types.ObjectId, ref: "Car", required: true },
   },
   {
     timestamps: true,

@@ -1,15 +1,28 @@
 <%- include('../partials/header') %>
 
 <h2>Rental details view</h2>
+
+<div class="rental-img">
+  <img src="/images/tesla.jpeg" alt="">
+</div>
+
 <div><%=rental.make%></div>
 <div><%=rental.model%></div>
+<div class="rent-profile">
+  <img src=<%=rental.user.avatar%>  alt="">
+  <div>
+    <p><%=rental.user.name%></p>
+    <p>All-Star-Captain</p>
+    <p>50 trips.Joined Apr 2023</p>
+  </div>
+</div>
 
-<form action="">
+<form action="/requests/<%=rental._id%>" method="POST">
   <label for="">Start Date</label>
-  <input type="date">
+  <input type="date" name="startDate" />
   <label for="">End Date</label>
-  <input type="date">
-  <input type="submit" value="Request">
+  <input type="date" name="endDate"/>
+  <input type="submit" value="Request" />
 </form>
 
 <%- include('../partials/footer') %>
