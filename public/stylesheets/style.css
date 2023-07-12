@@ -116,9 +116,30 @@ main {
   font-size: 36px;
 }
 
-.car-card {
+.cars {
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.car-card {
+  border-radius: 20px;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 40px auto;
+  background-color: #9EB3C2;
+}
+
+.cars > a {
+  text-decoration: none;
+  color: white;
 }
 
 .car-img {
@@ -126,5 +147,5 @@ main {
 
 .car-card img {
   object-fit: contain;
-  height: 100px;
+  height: 150px;
 }

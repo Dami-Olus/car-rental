@@ -1,17 +1,23 @@
 <%- include('../partials/header') %>
 
 <h1>Rental view</h1>
-<% rentals.forEach(function(r){ %>
-  <a href="/rentals/<%=r.id%>">
-    <div class="car-card">
-      <img src="/images/tesla.jpeg" alt="">
-      <div>
-        <p><%=r.make%></p>
-        <p><%=r.model%></p>
-      </div>
-    </div>
-  </a>
- 
-<%})%>
+<div class="cars">
+  
+  <% rentals.forEach(function(r){ %>
+    <% if(r.user._id.valueOf() !== user.id) { %>
+      <a href="/rentals/<%=r.id%>">
+        <div class="car-card">
+          <img src="/images/tesla.jpeg" alt="" />
+          <div>
+            <p><%=r.make%></p>
+            <p><%=r.model%></p>
+          </div>
+        </div>
+      </a>
+    
+   <% } %>
+  
+  <%})%>
+</div>
 
 <%- include('../partials/footer') %>

@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
 <h2>Cars Page</h2>
-
+<div class="cars">
 <% if(cars ){cars.forEach(car => { %>
 <a href="/cars/<%=car._id%>">
   <div class="car-card">
@@ -20,6 +20,7 @@
 <%})}else{ %>
 <div>You do not have any car</div>
 <%}%>
+</div>
 
 <a href="/cars/new">Add Car</a>
 
