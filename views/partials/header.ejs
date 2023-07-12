@@ -12,6 +12,10 @@
       <div class="logo"><a href="/"><h3 >Car-Rentals</h3></a></div>
       
       <% if(user){ %>
+        <div class="profile">
+        <img src=<%=user.avatar%> alt="" >
+        <p>Welcome <%=user.name %> </p>
+      </div>
       <a href="/cars" class="nav-link">My Cars</a>
       <a href="/rentals" class="nav-link">Rent a Car</a>
       <a href="/logout" class="nav-link">LOG OUT</a>

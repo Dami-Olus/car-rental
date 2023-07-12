@@ -58,6 +58,19 @@ nav .logo {
   height: 30px;
 }
 
+.profile {
+  display: flex;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile > img {
+  height: 30px;
+  border-radius: 50%;
+}
+
 main {
   padding: 0 100px;
 }
