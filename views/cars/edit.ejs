@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+
+<h2>Edit car details</h2>
+<form action="/cars/<%=car.id%>?_method=PUT" method="POST">
+  <label for="">Car Image</label>
+  <input type="file" name="image">
+  <label for="">Make</label>
+  <input type="text" name="make" value=<%=car.make%>>
+  <label for="">Model</label>
+  <input type="text" name="model" value=<%=car.model%> >
+  <label for="">Year</label>
+  <input type="text" name="year" value=<%=car.year%>>
+  <label for="">Color</label>
+  <input type="text" name="color" value=<%=car.color%>>
+  <input type="submit" value="Edit Car">
+</form>
+
+<%- include('../partials/footer') %>
