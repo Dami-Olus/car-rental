@@ -166,6 +166,7 @@ main {
 .rental-view {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   
 }
 
@@ -174,6 +175,21 @@ main {
 }
 
 .my-requests {
+  flex: 1;
+}
+
+.cars-view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.cars-view .cars {
+  flex: 2;
+}
+
+.requests {
   flex: 1;
 }
 

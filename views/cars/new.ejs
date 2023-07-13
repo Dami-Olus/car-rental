@@ -5,7 +5,15 @@
   <label for="">Car Image</label>
   <input type="file" name="image">
   <label for="">Make</label>
-  <input type="text" name="make">
+ 
+    <input type="text" name="make" list="make">
+    <datalist id="make">
+      <% cars.forEach(function(c){ %>
+        <option value=<%=c.model%>><%=c.model%></option>
+      <%})%>
+    </datalist>
+   
+ 
   <label for="">Model</label>
   <input type="text" name="model">
   <label for="">Year</label>

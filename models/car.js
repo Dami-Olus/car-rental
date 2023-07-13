@@ -5,7 +5,9 @@ const Schema = mongoose.Schema;
 
 const carSchema = new mongoose.Schema(
   {
-    make: String,
+    make: {
+      type: String,
+    },
     model: {
       type: String,
       required: true,
