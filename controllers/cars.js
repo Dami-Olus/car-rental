@@ -25,7 +25,7 @@ async function show(req, res) {
 }
 
 async function index(req, res) {
-  const cars = await Car.find({ user: req.user._id });
+  const cars = await Car.find({ user: req.user.id });
 
   const requests = await Request.find({}).populate('car').exec()
   res.render("cars/index", { title: "Your Garage", cars: cars, requests: requests});
