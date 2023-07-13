@@ -2,6 +2,9 @@
 
 <h1>Rental view</h1>
 <div class="rental-view">
+  <div>
+<h3>Choose a car to rent</h3>
+  
   <div class="cars">
     <% rentals.forEach(function(r){ %> <% if(r.user._id.valueOf() !== user.id) {
     %>
@@ -17,6 +20,7 @@
 
     <% } %> <%})%>
   </div>
+</div>
 
   <div class="my-requests">
     <h3>My requests</h3>

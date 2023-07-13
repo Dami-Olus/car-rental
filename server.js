@@ -8,10 +8,12 @@ const cookieParser = require("cookie-parser");
 const session = require("express-session");
 const passport = require("passport");
 const methodOverride = require("method-override");
+const MongoStore = require('connect-mongo');
 const indexRoutes = require("./routes/index");
 const carsRoutes = require("./routes/cars");
 const rentalsRoutes = require("./routes/rentals");
 const requestsRoutes = require("./routes/requests");
+
 
 // create the Express app
 const app = express();
@@ -39,6 +41,15 @@ app.use(
     saveUninitialized: true,
   })
 );
+
+app.use(session({
+  store: MongoStore.create({
+    mongoUrl: process.env.DATABASE_URL
+  }),
+  secret: process.env.SECRET,
+  resave: false,
+  saveUninitialized: true
+}));
 
 app.use(passport.initialize());
 app.use(passport.session());
