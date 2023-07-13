@@ -5,9 +5,6 @@ module.exports = {
 };
 
 async function create(req,res){
-  console.log(req.params)
-  console.log(req.body)
-  console.log(req.user)
   req.body.car = req.params.id
   req.body.userId = req.user.id
   req.body.userName = req.user.name

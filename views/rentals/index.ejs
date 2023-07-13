@@ -6,7 +6,7 @@
 <h3>Choose a car to rent</h3>
   
   <div class="cars">
-    <% rentals.forEach(function(r){ %> <% if(r.user._id.valueOf() !== user.id) {
+    <% rentals.forEach(function(r){ %> <% if(r.user.id.valueOf() !== user.id) {
     %>
     <a href="/rentals/<%=r.id%>">
       <div class="car-card">
