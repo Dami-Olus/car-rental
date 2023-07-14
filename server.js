@@ -15,15 +15,15 @@ const carsRoutes = require("./routes/cars");
 const rentalsRoutes = require("./routes/rentals");
 const requestsRoutes = require("./routes/requests");
 
-const storage = multer.diskStorage({
-  destination: './uploads',
-  filename: function (req, file, cb) {
-    cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
-  }
-});
+// const storage = multer.diskStorage({
+//   destination: './uploads',
+//   filename: function (req, file, cb) {
+//     cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+//   }
+// });
 
 
-const upload = multer({ storage: storage });
+// const upload = multer({ storage: storage });
 
 
 // create the Express app
@@ -69,7 +69,8 @@ app.use('/uploads', express.static('uploads'));
 
 // mount all routes with appropriate base paths
 app.use("/", indexRoutes);
-app.use("/cars",upload.single('image'), carsRoutes);
+// app.use("/cars",upload.single('image'), carsRoutes);
+app.use("/cars", carsRoutes);
 app.use("/rentals", rentalsRoutes);
 app.use("/requests", requestsRoutes);
 
