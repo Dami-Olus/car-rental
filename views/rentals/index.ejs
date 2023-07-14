@@ -3,24 +3,29 @@
 <h1>Rental view</h1>
 <div class="rental-view">
   <div>
-<h3>Choose a car to rent</h3>
-  
-  <div class="cars">
-    <% rentals.forEach(function(r){ %> <% if(r.user.id.valueOf() !== user.id) {
-    %>
-    <a href="/rentals/<%=r.id%>">
-      <div class="car-card">
-        <img src="/images/tesla.jpeg" alt="" />
-        <div>
-          <p><%=r.make%></p>
-          <p><%=r.model%></p>
-        </div>
-      </div>
-    </a>
+    <h3>Choose a car to rent</h3>
 
-    <% } %> <%})%>
+    <div class="cars">
+      <% rentals.forEach(function(r){ %> <% if(r.user.id.valueOf() !== user.id)
+      { %>
+      <a href="/rentals/<%=r.id%>">
+        <div>
+        <div class="car-card">
+          <img src="/images/tesla.jpeg" alt="" />
+          <div>
+            <p><%=r.make%></p>
+            <p><%=r.model%></p>
+          </div>
+        </div>
+        
+        
+      </a>
+      <button><i class="fa-solid fa-heart" style="color: #1b3b6f"></i> Add to Favourites</button>
+    </div>
+
+      <% } %> <%})%>
+    </div>
   </div>
-</div>
 
   <div class="my-requests">
     <h3>My requests</h3>
