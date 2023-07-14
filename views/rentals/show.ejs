@@ -17,6 +17,9 @@
   </div>
 </div>
 
+<div class="request-form">
+
+
 <form action="/requests/<%=rental._id%>" method="POST">
   <label for="">Start Date</label>
   <input type="date" name="startDate" />
@@ -24,5 +27,6 @@
   <input type="date" name="endDate"/>
   <input type="submit" value="Request" />
 </form>
+</div>
 
 <%- include('../partials/footer') %>
